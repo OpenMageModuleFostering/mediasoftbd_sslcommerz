@@ -1,0 +1,27 @@
+<?php
+/*
+Sslcommerz Payment Controller
+By: Abdul Matin
+www.matinict.wordpress.com
+*/
+
+
+// Retrieve order
+$_order = new Mage_Sales_Model_Order();
+$orderId = Mage::getSingleton('checkout/session')->getLastRealOrderId();
+$_order->loadByIncrementId($orderId);
+?>
+<form name="Sslcommerzform" method="post" action="https://www.sslcommerz.com.bd/testbox/process/index.php">
+	
+		<input type="hidden" name="store_id" value="test">
+    <input type="hidden" name="total_amount" value="<?php echo $_order->getBaseGrandTotal(); ?>">	
+
+	<input type="hidden" name="tran_id" value="<?php echo $orderId; ?>">
+    <input type="hidden" name="success_url" value="http://localhost/yourcompany/index.php/checkout/onepage/success">
+	<input type="hidden" name="fail_url" value="http://localhost/yourcompany/index.php/checkout/onepage/success">
+	<input type="hidden" name="cancel_url" value="http://localhost/yourcompany/index.php/checkout/onepage/failure">
+	
+</form>
+<script type="text/javascript">
+document.Sslcommerzform.submit();
+</script>
