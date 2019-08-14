@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Mediasoftbd_Sslcommerz",
+    "type": "magento-module",
+    "license": "-‎GNU-General-Public-License",
+    "homepage": "",
+    "description": "Mediasoftbd Sslcommerz  ",
+    "authors": [
+    {
+        "name": "Abdul",
+        "email": "matinict@gmail.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
